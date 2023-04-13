@@ -1,1 +1,9 @@
 # Linear Data Structures
+
+A linked list can be a useful data structure when solving certain problems, particularly those that require fast insertion and removal operations, as well as the ability to iterate over the data. Linked lists can be especially beneficial when dealing with large sets of data that may require frequent modifications, as they can provide a more efficient method of traversal and manipulation than other data structures such as arrays. Linked lists can also be advantageous when dealing with dynamic data, as they are capable of growing or shrinking in size without the need to reallocate memory.
+
+A stack is a type of data structure that follows the Last In First Out (LIFO) principle, meaning the last item added to the stack will be the first item removed. A queue is a type of data structure that follows the First In First Out (FIFO) principle, meaning the first item added to the queue will be the first item removed.
+
+A developer would use a stack when they need to keep track of a particular order of items or operations. For example, if they were writing a program that needed to break down a mathematical expression into its individual components, they could utilize a stack to keep track of the order of operations and ensure that they are evaluated correctly.
+
+A developer would use an array rather than a list when they need a fixed-length collection. Arrays have a static size and cannot be resized, whereas lists can grow and shrink as needed. Additionally, arrays are more efficient for reading and writing data as they store data in a continuous block of memory, whereas lists are allocated in separate blocks of memory.
