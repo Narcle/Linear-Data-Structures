@@ -10,11 +10,17 @@ class MainClass
         //2. 
         Console.WriteLine("N Integers (uses spaces between numbers):");
         int[] arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-        for (int i = (arr.Length-1); i > -1; i--)//read top to bottom
+        Stack<int> stack = new Stack<int>();
+
+        for (int i = 0; i < arr.Length; i++)//read top to bottom
         {
-            Console.WriteLine(arr[i]);
+            stack.Push(arr[i]);          
         }
-        //less to code than push/pop
+        
+        for (int i = 0; i < arr.Length; i++)
+        {
+            Console.WriteLine(stack.Pop());
+        }
 
 
         //7. 
