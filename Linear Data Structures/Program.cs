@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 //
 class MainClass
@@ -13,6 +14,8 @@ class MainClass
         {
             Console.WriteLine(arr[i]);
         }
+        //less to code than push/pop
+
 
         //7. 
         int[] array = { 10, 5, 10, 2, 2, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 12 };
@@ -26,11 +29,31 @@ class MainClass
         }
 
         foreach (var pair in dict)
-            Console.WriteLine("Value {0} counted {1} times.", pair.Key, pair.Value);
-        Console.ReadKey();
+            Console.WriteLine("Value {0} counted {1} times.", pair.Key, pair.Value);       
 
         //9. 
-        
-    }
+        Queue<int> queue = new Queue<int>();
+        Console.WriteLine("Queue Integer N:");
+        int num = Convert.ToInt32(Console.ReadLine());//Start with N
+        int newnum = 0;
+        queue.Enqueue(num);
+        Console.WriteLine(num);
 
+        while (queue.Count < 50)
+        {          
+            num = queue.Dequeue();
+            
+            newnum = num + 1;
+            queue.Enqueue(newnum);
+            Console.WriteLine(newnum);
+
+            newnum = 2 * num + 1;
+            queue.Enqueue(newnum);
+            Console.WriteLine(newnum);
+
+            newnum = num + 2;
+            queue.Enqueue(newnum);
+            Console.WriteLine(newnum);           
+        }
+    }
 }
