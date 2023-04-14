@@ -61,5 +61,34 @@ class MainClass
             queue.Enqueue(newnum);
             Console.WriteLine(newnum);           
         }
+
+        number7();
     }
+
+    public static void number7()
+    {
+        int[] arr = new int[] { 10, 5, 10, 2, 2, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 12 };
+        int[] count = new int[arr.Length];
+        int i, j;
+
+        // loop over the given array and count the occurance of each number
+        for (i = 0; i < arr.Length; i++)
+        {
+            count[i] = 0;
+            for (j = 0; j < arr.Length; j++)
+            {
+                if (arr[i] == arr[j])
+                {
+                    count[i]++;
+                }
+            }
+        }
+
+        // print the occurance of each number
+        for (i = 0; i < arr.Length; i++)
+        {
+            Console.WriteLine("Number " + arr[i] + " occurs " + count[i] + " times");
+        }
+    }
+
 }
